@@ -28,7 +28,7 @@ const array_input = [
   'Ommin Voldemort'
 ];
 
-const sorted_array = [
+const asorted_array = [
   'Cordelia Holt',
   'Faust Rune',
   'Gideon Stibbons',
@@ -41,11 +41,31 @@ const sorted_array = [
   'Tamika Konstan'
 ];
 
+const dsorted_array = [
+  'Tamika Konstan',
+  'Ruki Imperial',
+  'Randall Ridcully',
+  'Ponder Weasley',
+  'Paris Cutler',
+  'Ommin Voldemort',
+  'Nadia Drake',
+  'Gideon Stibbons',
+  'Faust Rune',
+  'Cordelia Holt'
+];
+
 describe('Test some sort algorithms', () => {
-	it('Should sort an array using BubbleSort algorithm', () => {
+	it('Should sort an array using ascendent BubbleSort algorithm', () => {
     bubbleSort(array_input);
 
-		expect(array_input).to.deep.equal(sorted_array);
+		expect(array_input).to.deep.equal(asorted_array);
 
 	});
+
+  it('Should sort an array using descendent BubbleSort algorithm', () => {
+    bubbleSort(array_input, 'desc');
+
+    expect(array_input).to.deep.equal(dsorted_array);
+
+  });
 });
