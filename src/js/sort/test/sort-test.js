@@ -1,7 +1,9 @@
+'use strict'
+
 /**
  * Arquivo: bubblesort-test.js
  * Author: Vanderci Curvelo Junior
- * Description: test for the file : 'bubblesort.js'
+ * Description: test for the file : 'sort.js'
  * Data: 11/05/2020
  *
  * Documentação: http://chaijs.com/guide/styles/#expect
