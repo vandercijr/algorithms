@@ -27,7 +27,7 @@
   "homepage": "https://github.com/vandercijr/algorithms#readme",
   "dependencies": {
     "chai": "^4.2.0",
-    "eslinter": "^3.2.1",
+    "eslint": "^7.0.0",
     "mocha": "^7.1.2"
   }
 }
