@@ -1,0 +1,33 @@
+{
+  "name": "algorithms",
+  "version": "0.1.0",
+  "description": "Algorithms implementation for study purpose",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vandercijr/algorithms.git"
+  },
+  "keywords": [
+    "algorithm",
+    "sort",
+    "djakstra",
+    "bubblesort",
+    "quicksort",
+    "derivative",
+    "blacknscholes"
+  ],
+  "author": "Vanderci C Junior",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vandercijr/algorithms/issues"
+  },
+  "homepage": "https://github.com/vandercijr/algorithms#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "eslinter": "^3.2.1",
+    "mocha": "^7.1.2"
+  }
+}
