@@ -4,13 +4,13 @@
  * Description: test for the file : 'bubblesort.js'
  * Data: 11/05/2020
  *
- * Documentação: http://chaijs.com/guide/styles/#assert
+ * Documentação: http://chaijs.com/guide/styles/#expect
  *
  */
 
 const chai = require('chai');
-const bubblesort = require('../bubblesort.js');
-const assert = chai.assert;
+const { bubbleSort } = require('../sort.js');
+const expect = chai.expect;
 
 //names generated from ttps://www.name-generator.org.uk
 const array_input = [
@@ -40,9 +40,10 @@ const sorted_array = [
 ];
 
 describe('Test some sort algorithms', () => {
-	it('Should sort an array using BubbleSort algo', () => {
+	it('Should sort an array using BubbleSort algorithm', () => {
+    bubbleSort(array_input);
 
-		assert.equal(bubblesort(array_input), sorted_array);
+		expect(array_input).to.deep.equal(sorted_array);
 
 	});
 });
