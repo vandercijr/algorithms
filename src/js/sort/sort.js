@@ -26,14 +26,15 @@
 // };
 
 //  the iterative way
+const swap = (swap_array, i, j) =>  {
+  let auxiliar = swap_array[i];
+
+  swap_array[i] = swap_array[j];
+  swap_array[j] = auxiliar;
+}
+
 const bubbleSort = (array_input, order) => {
   const asize = array_input.length;
-  const swap = (swap_array, idxa, idxb) =>  {
-    let auxiliar = swap_array[idxa];
-
-    swap_array[idxa] = swap_array[idxb];
-    swap_array[idxb] = auxiliar;
-  }
 
   if (asize > 2) {
     let found = true;
@@ -42,10 +43,14 @@ const bubbleSort = (array_input, order) => {
       found = false;
 
       for (var i = 0; i < asize; i++) {
-        if (array_input[i] > array_input[i+1]) {
-          found = true;
+        let a = (order === 'desc') ? i+1 : i, 
+            b = (order === 'desc') ? i   : i+1;
 
-          swap(array_input, i, i+1);
+        let shouldSwap = array_input[a] > array_input[b];
+
+        if (shouldSwap) {
+          found = true;
+          swap(array_input, a, b);
         }
       }
     }
