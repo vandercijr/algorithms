@@ -1,6 +1,14 @@
 'use strict';
 
-// recursive form
+/**
+ * Arquivo: sort.js
+ * Author: Vanderci Curvelo Junior
+ * Description: implementation of some sort algorithms'
+ * Data: 11/05/2020
+ *
+ */
+
+// the recursive way
 // first implementation
 // const bubbleSort = (array_input) => {
 //   const asize = array_input.length;

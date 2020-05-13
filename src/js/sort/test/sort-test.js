@@ -1,7 +1,7 @@
 'use strict'
 
 /**
- * Arquivo: bubblesort-test.js
+ * Arquivo: sort-test.js
  * Author: Vanderci Curvelo Junior
  * Description: test for the file : 'sort.js'
  * Data: 11/05/2020
