@@ -13,18 +13,35 @@ const Node = {
   next   :  {}
 };
 
-let head_node = {};
+let head_node;
 
 const addToTop = (object)  =>  {
-  let next = {};
+  let next;
 
-  if (head_node !== {}) {
+  if (typeof head_node !== 'undefined') {
       next = head_node;
   }
 
-  head_node = Object.assign({}, Node);
+  head_node = Object.create(Node);
   head_node.object = object;
   head_node.next   = next;
+};
+
+const push = (object)  =>  {
+  let current_node = head_node;
+  let next;
+
+  if (typeof head_node === 'undefined') {
+      addToTop(object);
+      return true;
+  }
+
+  while (typeof current_node.next !== 'undefined') current_node = current_node.next;
+
+  current_node.next = Object.create(Node);
+
+  current_node.next.object = object;
+  current_node.next.next   = next;
 };
 
 const remove = ()  =>  {
@@ -35,16 +52,14 @@ const find = ()  =>  {
 
 };
 
-const count = ()  =>  {
-
-};
 
 const list  = ()  =>  {
 
 }
 
 const linkedList = {
-  addToTop : addToTop
+  addToTop : addToTop,
+  push     : push,
 }
 
 const s1 = {
@@ -62,11 +77,15 @@ const s3 = {
   age  : 11
 };
 
-linkedList.addToTop(s1, {});
+// linkedList.addToTop(s1);
+//
+// linkedList.addToTop(s2);
 
-linkedList.addToTop(s2, s1);
+linkedList.push(s1);
 
-linkedList.addToTop(s3, s2);
+linkedList.push(s2);
+
+linkedList.push(s3);
+
 
 console.log(head_node);
-console.log(head_node.next);
