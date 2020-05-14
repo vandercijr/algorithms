@@ -47,16 +47,15 @@ const push = (object)  =>  {
   current_node.next.next   = next;
 };
 
-  const remove = (id)  =>  {
+const remove = (id)  =>  {
   let current_node = head_node;
-  let next;
 
-  if (typeof head_node === 'undefined') {
-      addToTop(object);
-      return true;
+  while (typeof current_node.next !== 'undefined') {
+    if (current_node.next.id === id) {
+      current_node.next = current_node.next.next;
+    }
+    current_node = current_node.next;
   }
-
-  while (typeof current_node.next !== 'undefined') current_node = current_node.next;
 };
 
 const find = (id)  =>  {
@@ -72,7 +71,7 @@ const find = (id)  =>  {
   return Object.create(Node);
 };
 
-const count = ()  =>  {
+const count = () =>  {
   let current_node = head_node;
   let count = 0;
 
@@ -92,7 +91,8 @@ const linkedList = {
   addToTop : addToTop,
   push     : push,
   count    : count,
-  find     : find
+  find     : find,
+  remove   : remove
 }
 
 const s1 = {
@@ -121,6 +121,13 @@ linkedList.push(s2);
 linkedList.push(s3);
 
 console.log(head_node);
+
+linkedList.remove(2);
+
+console.log(head_node);
+
+
+
 console.log(linkedList.count());
 
 console.log(linkedList.find(4));
