@@ -52,6 +52,17 @@ const find = ()  =>  {
 
 };
 
+const count = ()  =>  {
+  let current_node = head_node;
+  let count = 0;
+
+  while (typeof current_node !== 'undefined') {
+    count ++;
+    current_node = current_node.next;
+  }
+
+  return count;
+};
 
 const list  = ()  =>  {
 
@@ -60,6 +71,7 @@ const list  = ()  =>  {
 const linkedList = {
   addToTop : addToTop,
   push     : push,
+  count    : count
 }
 
 const s1 = {
@@ -87,5 +99,6 @@ linkedList.push(s2);
 
 linkedList.push(s3);
 
+console.log(linkedList.count());
 
 console.log(head_node);
